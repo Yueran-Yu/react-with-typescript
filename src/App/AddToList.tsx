@@ -1,10 +1,6 @@
 import React, {useState} from 'react';
-import {IState as Props} from '../App'
+import {IProps} from '../react-app-env'
 
-interface IProps {
-	people: Props['people']
-	setPeople: React.Dispatch<React.SetStateAction<Props['people']>>
-}
 
 const AddToList: React.FC<IProps> = ({people, setPeople}) => {
 	const [input, setInput] = useState({

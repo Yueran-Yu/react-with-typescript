@@ -1,16 +1,8 @@
 import React, {useState} from 'react';
 import './App.css';
-import AddToList from './component/AddToList';
-import List from './component/List';
-
-export interface IState {
-	people: {
-		name: string
-		age: number
-		url: string
-		note?: string
-	}[]
-}
+import AddToList from './AddToList';
+import List from './List';
+import {IState} from "../react-app-env";
 
 function App() {
 	const [people, setPeople] = useState<IState["people"]>([
@@ -21,8 +13,6 @@ function App() {
 			note: "Build encapsulated components that manage their own state."
 		}
 	])
-
-	people.map(p => p.name)
 
 	return (
 		<div className="App">

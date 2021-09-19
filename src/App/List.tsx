@@ -1,8 +1,10 @@
 import React from 'react';
-import {IState as IProps} from '../App'
+import {IState} from '../react-app-env'
 
-const List: React.FC<IProps> = ({people}) => {
+const List: React.FC<IState> = ({people}) => {
+
 		const renderList = (): JSX.Element[] => {
+
 			return people.map(person => (
 				<li className="List">
 					<div className="List-header">
